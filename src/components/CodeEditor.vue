@@ -1,7 +1,7 @@
 <template>
   <div>
     <PrismEditor
-      class="my-editor height-200"
+      class="my-editor height-400"
       v-model="code"
       :highlight="highlighter"
       line-numbers
@@ -10,7 +10,6 @@
   </div>
 </template>
 <script>
-// import Prism Editor
 import { PrismEditor } from 'vue-prism-editor';
 import 'vue-prism-editor/dist/prismeditor.min.css';
 import { highlight, languages } from 'prismjs/components/prism-core';
@@ -37,6 +36,9 @@ export default {
 </script>
 
 <style>
+.height-400 {
+  height: 400px
+}
 .my-editor {
   background: #2d2d2d;
   color: #ccc;
