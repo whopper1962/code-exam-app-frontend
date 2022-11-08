@@ -1,13 +1,11 @@
 <template>
-  <div>
-    <PrismEditor
-      class="my-editor height-400"
-      v-model="code"
-      :highlight="highlighter"
-      line-numbers
-    >
-    </PrismEditor>
-  </div>
+  <PrismEditor
+    class="my-editor height-400"
+    v-model="code"
+    :highlight="highlighter"
+    line-numbers
+  >
+  </PrismEditor>
 </template>
 <script>
 import { PrismEditor } from 'vue-prism-editor';
@@ -40,6 +38,7 @@ export default {
   height: 400px
 }
 .my-editor {
+  width: inherit;
   background: #2d2d2d;
   color: #ccc;
   font-family: Fira code, Fira Mono, Consolas, Menlo, Courier, monospace;
