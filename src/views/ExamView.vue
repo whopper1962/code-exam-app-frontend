@@ -1,12 +1,16 @@
 <template>
   <div>
     <h3>Exams</h3>
-    <div class="exam-main-content">
-      <div class="exam-explanation-box">
-        {{ examContent }}
+    <template v-for="(exam, index) in exams">
+      <div class="exam-main-content" :key="`exam_${index}`">
+        <div class="exam-explanation-box">
+          {{ exam.explanation }}
+        </div>
+        <PrismEditor
+          v-model="inputed[index].code"
+        />
       </div>
-      <PrismEditor/>
-    </div>
+    </template>
   </div>
 </template>
 
@@ -18,11 +22,27 @@ export default {
   },
   data () {
     return {
-      examContent: 'Solve this quiz.'
+      exams: [
+        {
+          explanation: 'Solve this quiz.'
+        }
+      ],
+      inputed: []
     };
   },
-  created () {},
-  methods: {}
+  created () {
+    this.getExams();
+  },
+  methods: {
+    getExams () {
+      for (let i = 0, len = this.exams.length; i < len; i++) {
+        this.inputed.push({
+          memo: '',
+          code: 'console.log("Hello World");'
+        });
+      }
+    }
+  }
 }
 </script>
 
@@ -36,5 +56,7 @@ export default {
 .exam-main-content {
   border: solid rgb(181, 181, 181);
   padding: 10px;
+}
+.exam-memo {
 }
 </style>

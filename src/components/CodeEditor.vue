@@ -1,7 +1,7 @@
 <template>
   <PrismEditor
     class="my-editor height-400"
-    v-model="code"
+    v-model="inputedCode"
     :highlight="highlighter"
     line-numbers
   >
@@ -24,7 +24,19 @@ export default {
       code: 'console.log("Hello World")'
     };
   },
-  props: {},
+  props: {
+    value: [String, Number]
+  },
+  computed: {
+    inputedCode: {
+      get () {
+        return this.value;
+      },
+      set (code) {
+        this.$emit('input', code);
+      }
+    }
+  },
   methods: {
     highlighter(code) {
       return highlight(code, languages.js);
