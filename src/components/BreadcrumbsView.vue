@@ -8,12 +8,9 @@
       :key="`exam_${index}`"
     >
       <span class="breadcrumb__inner">
-        <span class="breadcrumb__title">
-          {{ index + 1 }}
-        </span>
         <span
           v-if="exam.title"
-          class="breadcrumb__desc"
+          class="breadcrumb__title"
         >
           {{ exam.title }}
         </span>
