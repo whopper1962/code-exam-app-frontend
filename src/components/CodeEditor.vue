@@ -7,6 +7,7 @@
   >
   </PrismEditor>
 </template>
+
 <script>
 import { PrismEditor } from 'vue-prism-editor';
 import 'vue-prism-editor/dist/prismeditor.min.css';
@@ -51,6 +52,7 @@ export default {
 }
 .my-editor {
   width: inherit;
+  border-radius: 8px;
   background: #2d2d2d;
   color: #ccc;
   font-family: Fira code, Fira Mono, Consolas, Menlo, Courier, monospace;

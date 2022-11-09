@@ -1,14 +1,20 @@
 <template>
   <div>
-    <h3>Exams</h3>
     <template v-for="(exam, index) in exams">
       <div class="exam-main-content" :key="`exam_${index}`">
+        <h2 class="exam-title">{{ exam.title }}</h2>
         <div class="exam-explanation-box">
           {{ exam.explanation }}
         </div>
         <PrismEditor
           v-model="inputed[index].code"
         />
+        <div class="exam-memo-textarea-wrapper">
+          <textarea
+            rows="6"
+            v-model="inputed[index].memo"
+          />
+        </div>
       </div>
     </template>
   </div>
@@ -24,6 +30,11 @@ export default {
     return {
       exams: [
         {
+          title: 'Variable',
+          explanation: 'Solve this quiz.'
+        },
+        {
+          title: 'Function',
           explanation: 'Solve this quiz.'
         }
       ],
@@ -47,16 +58,33 @@ export default {
 </script>
 
 <style scoped>
+.exam-main-content {
+  border: solid rgb(181, 181, 181);
+  border-radius: 8px;
+  padding: 10px;
+  margin-top: 10px;
+}
+.exam-title {
+  margin: 0px 0px 10px 10px;
+  text-align: left;
+}
 .exam-explanation-box {
   border: solid rgb(181, 181, 181);
-  margin: 5px 0px;
+  border-radius: 8px;
+  margin: 0px 0px 10px 0px;
   padding: 10px;
   text-align: left;
 }
-.exam-main-content {
-  border: solid rgb(181, 181, 181);
-  padding: 10px;
+.exam-memo-textarea-wrapper {
+  width: 100%;
 }
-.exam-memo {
+.exam-memo-textarea-wrapper textarea {
+  border:5px solid rgb(181, 181, 181);;
+  border-radius: 8px;
+  width:100%;
+  margin:10px 0px 0px 0px;
+  padding:1%;
+  box-sizing: border-box;
+  resize: none;
 }
 </style>
