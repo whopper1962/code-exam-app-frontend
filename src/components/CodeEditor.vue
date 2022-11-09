@@ -48,7 +48,7 @@ export default {
 
 <style>
 .height-400 {
-  height: 400px
+  height: 40vh
 }
 .my-editor {
   width: inherit;
