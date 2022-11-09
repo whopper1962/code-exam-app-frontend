@@ -1,7 +1,15 @@
 <template>
   <div>
+    <BreadcrumbsView
+      v-model="selectedExamIndex"
+      :exams="exams"
+    />
     <template v-for="(exam, index) in exams">
-      <div class="exam-main-content" :key="`exam_${index}`">
+      <div
+        class="exam-main-content"
+        v-show="selectedExamIndex === index"
+        :key="`exam_${index}`"
+      >
         <h2 class="exam-title">{{ exam.title }}</h2>
         <div class="exam-explanation-box">
           {{ exam.explanation }}
@@ -22,9 +30,12 @@
 
 <script>
 import PrismEditor from '@/components/CodeEditor';
+import BreadcrumbsView from '@/components/BreadcrumbsView';
+
 export default {
   components: {
-    PrismEditor
+    PrismEditor,
+    BreadcrumbsView
   },
   data () {
     return {
@@ -36,9 +47,26 @@ export default {
         {
           title: 'Function',
           explanation: 'Solve this quiz.'
+        },
+        {
+          title: 'Class',
+          explanation: 'Solve this quiz.'
+        },
+        {
+          title: 'Title3',
+          explanation: 'Solve this quiz.'
+        },
+        {
+          title: 'Title4',
+          explanation: 'Solve this quiz.'
+        },
+        {
+          title: 'Title5',
+          explanation: 'Solve this quiz.'
         }
       ],
-      inputed: []
+      inputed: [],
+      selectedExamIndex: 0
     };
   },
   created () {
