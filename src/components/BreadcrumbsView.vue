@@ -1,7 +1,6 @@
 <template>
   <div class="breadcrumb">
     <a
-      class="current"
       v-for="(exam, index) in exams"
       @click="tabClicked(index)"
       :key="`exam_${index}`"
@@ -12,6 +11,15 @@
           class="breadcrumb__title"
         >
           {{ exam.title }}
+        </span>
+      </span>
+    </a>
+    <a @click="tabClicked(exams.length)">
+      <span class="breadcrumb__inner">
+        <span
+          class="breadcrumb__title"
+        >
+          Submit!
         </span>
       </span>
     </a>
