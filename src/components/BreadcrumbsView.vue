@@ -19,7 +19,11 @@
         <span
           class="breadcrumb__title"
         >
-          Submit!
+          Submit
+          <font-awesome-icon
+            class="font-awesome-icon-style"
+            icon="fa-solid fa-rocket"
+          />
         </span>
       </span>
     </a>
@@ -184,5 +188,9 @@ $base: 38px;
     right: $base / 2 * -1;
     transform: scale(0.707) rotate(45deg);
   }
+}
+
+.font-awesome-icon-style {
+  margin-left: 1px;
 }
 </style>
