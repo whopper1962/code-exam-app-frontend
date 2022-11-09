@@ -107,7 +107,7 @@ export default {
   width: 100%;
 }
 .exam-memo-textarea-wrapper textarea {
-  border:5px solid rgb(181, 181, 181);;
+  border: solid rgb(181, 181, 181);;
   border-radius: 8px;
   width:100%;
   margin:10px 0px 0px 0px;
