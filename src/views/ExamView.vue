@@ -25,17 +25,23 @@
         </div>
       </div>
     </template>
+    <SubmitExamView
+      v-show="selectedExamIndex === exams.length"
+      @submit="submitExam()"
+    />
   </div>
 </template>
 
 <script>
 import PrismEditor from '@/components/CodeEditor';
 import BreadcrumbsView from '@/components/BreadcrumbsView';
+import SubmitExamView from '@/components/SubmitExamView';
 
 export default {
   components: {
     PrismEditor,
-    BreadcrumbsView
+    BreadcrumbsView,
+    SubmitExamView
   },
   data () {
     return {
@@ -80,6 +86,9 @@ export default {
           code: 'console.log("Hello World");'
         });
       }
+    },
+    submitExam () {
+      console.error('Submitted!');
     }
   }
 }
