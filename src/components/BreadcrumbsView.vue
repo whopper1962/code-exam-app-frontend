@@ -1,7 +1,6 @@
 <template>
   <div class="breadcrumb">
     <a
-      href="#"
       class="current"
       v-for="(exam, index) in exams"
       @click="tabClicked(index)"
@@ -86,6 +85,7 @@ $base: 38px;
 }
 
 .breadcrumb a {
+  cursor: pointer;
   position: relative;
   display: flex;
   flex-grow: 1;
