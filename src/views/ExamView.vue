@@ -112,7 +112,10 @@ export default {
   padding: 10px;
   text-align: left;
 }
-.exam-memo-textarea-wrapper {
+.exam-memo-textarea-wrapper textarea{
+  font-family : inherit;
+  font-size   : inherit;
+  color: #2c3e50;
   width: 100%;
 }
 .exam-memo-textarea-wrapper textarea {

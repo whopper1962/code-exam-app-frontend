@@ -57,18 +57,6 @@ export default {
 <style lang="scss">
 $base: 38px;
 
-// * {
-//   margin: 0;
-//   padding: 0;
-//   box-sizing: border-box;
-// }
-
-// html,
-// body {
-//   height: 100%;
-//   background-color: #333;
-// }
-
 .container {
   display: flex;
   margin: 0px 5px;
@@ -89,8 +77,6 @@ $base: 38px;
   top: 50%;
   width: 100%;
   height: $base * 1.5;
-  // transform: translateY(-1000%);
-  // box-shadow: 0 1px 1px rgba(0, 0, 0, 1), 0 4px 14px rgba(0, 0, 0, 0.7);
   z-index: 1;
   background-color: #ddd;
   font-size: 14px;
@@ -159,7 +145,6 @@ $base: 38px;
   color: white;
 }
 // 1000px
-///////////////////////
 @media all and (max-width: 1000px) {
   .breadcrumb {
     font-size: 12px;
@@ -167,7 +152,6 @@ $base: 38px;
 }
 
 // 710px
-///////////////////////
 @media all and (max-width: 710px) {
   .breadcrumb__desc {
     display: none;
