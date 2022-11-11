@@ -4,6 +4,9 @@
       v-for="(exam, index) in exams"
       @click="tabClicked(index)"
       :key="`exam_${index}`"
+      :class="{
+        'current': index === selectedExamNumber
+      }"
     >
       <span class="breadcrumb__inner">
         <span
@@ -14,7 +17,12 @@
         </span>
       </span>
     </a>
-    <a @click="tabClicked(exams.length)">
+    <a
+      @click="tabClicked(exams.length)"
+      :class="{
+        'current': exams.length === selectedExamNumber
+      }"
+    >
       <span class="breadcrumb__inner">
         <span
           class="breadcrumb__title"
@@ -80,6 +88,10 @@ $base: 38px;
   z-index: 1;
   background-color: #ddd;
   font-size: 16px;
+}
+
+.current {
+  background-color: yellowgreen;
 }
 
 .breadcrumb a {
