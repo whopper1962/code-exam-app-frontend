@@ -17,12 +17,10 @@
         <CodeEditor
           v-model="inputed[index].code"
         />
-        <div class="exam-memo-textarea-wrapper">
-          <textarea
-            rows="6"
-            v-model="inputed[index].memo"
-          />
-        </div>
+        <AppTextarea
+          :rows="6"
+          v-model="inputed[index].memo"
+        />
       </div>
     </template>
     <SubmitExamView
@@ -36,12 +34,14 @@
 import CodeEditor from '@/components/CodeEditor';
 import BreadcrumbsView from '@/components/BreadcrumbsView';
 import SubmitExamView from '@/components/SubmitExamView';
+import AppTextarea from '@/components/AppTextarea';
 
 export default {
   components: {
     CodeEditor,
     BreadcrumbsView,
-    SubmitExamView
+    SubmitExamView,
+    AppTextarea
   },
   data () {
     return {
@@ -111,20 +111,5 @@ export default {
   margin: 0px 0px 10px 0px;
   padding: 10px;
   text-align: left;
-}
-.exam-memo-textarea-wrapper textarea{
-  font-family : inherit;
-  font-size   : inherit;
-  color: #2c3e50;
-  width: 100%;
-}
-.exam-memo-textarea-wrapper textarea {
-  border: solid rgb(181, 181, 181);;
-  border-radius: 8px;
-  width:100%;
-  margin:10px 0px 0px 0px;
-  padding:1%;
-  box-sizing: border-box;
-  resize: none;
 }
 </style>

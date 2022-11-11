@@ -1,31 +1,37 @@
 <template>
-  <div>
-    <div class="exam-memo-textarea-wrapper">
-      <AppTextarea
-        :rows="6"
-        v-model="testContent"
-      />
-    </div>
-    <CodeEditor
-      v-model="code"
+  <div class="exam-memo-textarea-wrapper">
+    <textarea
+      :rows="rows"
+      v-model="inputedText"
     />
   </div>
 </template>
-<script>
-import CodeEditor from '@/components/CodeEditor';
-import AppTextarea from '@/components/AppTextarea';
 
+<script>
 export default {
-  components: {
-    CodeEditor,
-    AppTextarea
+  props: {
+    value: {
+      type: String,
+      defualt: ''
+    },
+    rows: {
+      type: Number,
+      default: 6
+    }
+  },
+  computed: {
+    inputedText: {
+      get () {
+        return this.value;
+      },
+      set (newVal) {
+        this.$emit('input', newVal);
+      }
+    }
   },
   data () {
-    return {
-      code: 'console.log("Hello Code-Exam!");',
-      testContent: ''
-    };
-  }
+    return {};
+  },
 }
 </script>
 
