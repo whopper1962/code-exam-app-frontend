@@ -14,7 +14,7 @@
         <div class="exam-explanation-box">
           {{ exam.explanation }}
         </div>
-        <PrismEditor
+        <CodeEditor
           v-model="inputed[index].code"
         />
         <div class="exam-memo-textarea-wrapper">
@@ -33,13 +33,13 @@
 </template>
 
 <script>
-import PrismEditor from '@/components/CodeEditor';
+import CodeEditor from '@/components/CodeEditor';
 import BreadcrumbsView from '@/components/BreadcrumbsView';
 import SubmitExamView from '@/components/SubmitExamView';
 
 export default {
   components: {
-    PrismEditor,
+    CodeEditor,
     BreadcrumbsView,
     SubmitExamView
   },
