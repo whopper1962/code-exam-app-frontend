@@ -1,6 +1,6 @@
 <template>
   <div>
-    <BreadcrumbsView
+    <ExamProgressBreadcrumbs
       v-model="selectedExamIndex"
       :exams="exams"
     />
@@ -32,14 +32,14 @@
 
 <script>
 import CodeEditor from '@/components/CodeEditor';
-import BreadcrumbsView from '@/components/BreadcrumbsView';
+import ExamProgressBreadcrumbs from '@/components/ExamProgressBreadcrumbs';
 import SubmitExamView from '@/components/SubmitExamView';
 import AppTextarea from '@/components/AppTextarea';
 
 export default {
   components: {
     CodeEditor,
-    BreadcrumbsView,
+    ExamProgressBreadcrumbs,
     SubmitExamView,
     AppTextarea
   },
