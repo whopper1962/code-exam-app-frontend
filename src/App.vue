@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <HeaderView/>
+    <NavigationBar/>
     <div class="main-content">
       <router-view/>
     </div>
@@ -8,11 +8,11 @@
 </template>
 
 <script>
-import HeaderView from '@/components/HeaderView';
+import NavigationBar from '@/components/NavigationBar';
 
 export default {
   components: {
-    HeaderView
+    NavigationBar
   }
 }
 </script>

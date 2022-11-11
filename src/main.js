@@ -7,10 +7,14 @@ Vue.config.productionTip = false;
 
 // Import fontawesome
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faRocket } from '@fortawesome/free-solid-svg-icons';
+import {
+  faRocket,
+  faLaptopCode
+} from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 const faIcons = [
-  faRocket
+  faRocket,
+  faLaptopCode
 ];
 library.add(faIcons);
 Vue.component('font-awesome-icon', FontAwesomeIcon);

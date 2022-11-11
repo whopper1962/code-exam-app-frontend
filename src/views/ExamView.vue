@@ -48,7 +48,7 @@ export default {
       exams: [
         {
           title: 'Variable',
-          explanation: 'Solve this quiz.'
+          explanation: 'As in above comment - false alarm. Somewhere between Docker image caching and npm, the sass-loader and node-sass modules were reported as being installed, while not actually being installed. The usual rm node_modules and rebuilding with no cache trick fixed it. As in above comment - false alarm. Somewhere between Docker image caching and npm, the sass-loader and node-sass modules were reported as being installed, while not actually being installed. The usual rm node_modules and rebuilding with no cache trick fixed it. As in above comment - false alarm. Somewhere between Docker image caching and npm, the sass-loader and node-sass modules were reported as being installed, while not actually being installed. The usual rm node_modules and rebuilding with no cache trick fixed it.'
         },
         {
           title: 'Function',
@@ -83,7 +83,7 @@ export default {
       for (let i = 0, len = this.exams.length; i < len; i++) {
         this.inputed.push({
           memo: '',
-          code: 'console.log("Hello World");'
+          code: 'console.log("Hello Code-Exam!");'
         });
       }
     },
