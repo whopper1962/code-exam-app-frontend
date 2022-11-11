@@ -1,21 +1,29 @@
 <template>
   <div class="submit-page-area">
-    <button
-      class="submit-button"
-      @click="$emit('submit')"
-    >
-      Submit!
-    </button>
+    <AppButton
+      :buttonText="'Submit!!'"
+      :clicked="btnClicked"
+    />
   </div>
 </template>
+
 <script>
+import AppButton from '@/components/AppButton';
+
 export default {
+  components: {
+    AppButton
+  },
   data () {
     return {};
   },
   props: {},
   computed: {},
-  methods: {}
+  methods: {
+    btnClicked () {
+      this.$emit('submit');
+    }
+  }
 }
 </script>
 
