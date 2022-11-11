@@ -19,7 +19,7 @@
         <span
           class="breadcrumb__title"
         >
-          Submit
+          Submit!
           <font-awesome-icon
             class="font-awesome-icon-style"
             icon="fa-solid fa-rocket"
@@ -79,7 +79,7 @@ $base: 38px;
   height: $base * 1.5;
   z-index: 1;
   background-color: #ddd;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .breadcrumb a {
