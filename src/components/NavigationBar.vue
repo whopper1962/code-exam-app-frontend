@@ -56,7 +56,7 @@ export default {
           label: "Exams",
         },
         {
-          name: "EXAM_VIEW",
+          name: "TEXTBOOK_REGISTRATION",
           label: "Textbooks",
         },
       ];
